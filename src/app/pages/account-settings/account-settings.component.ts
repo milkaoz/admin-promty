@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { SettingsService } from 'src/app/services/settings.service';
+
+import { SettingsService } from '../../services/service.index';
 
 @Component({
   selector: 'app-account-settings',
@@ -43,7 +44,9 @@ export class AccountSettingsComponent implements OnInit {
   colocarCheck() {
 
     const selectores: any = document.getElementsByClassName('selector');
+
     const tema = this.ajustesService.ajustes.tema;
+
     for ( const ref of selectores) {
       if ( ref.getAttribute('data-theme') === tema) {
         ref.classList.add('working');
