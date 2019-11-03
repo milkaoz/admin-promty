@@ -32,7 +32,7 @@ export class AccountSettingsComponent implements OnInit {
 
     for ( const ref of selectores) {
 
-      // Saca el estilo 'working' de la lista
+      // Saca el estilo 'working' de la lista html
       ref.classList.remove('working');
     }
 
@@ -48,6 +48,7 @@ export class AccountSettingsComponent implements OnInit {
     const tema = this.ajustesService.ajustes.tema;
 
     for ( const ref of selectores) {
+      // TODO: Revisar conceptos
       if ( ref.getAttribute('data-theme') === tema) {
         ref.classList.add('working');
         break;

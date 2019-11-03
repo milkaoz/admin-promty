@@ -26,7 +26,7 @@ export class RxjsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    console.log('La pagina se va a cerrar ');
+    // console.log('La pagina se va a cerrar ');
     this.subscription.unsubscribe();
   }
 
@@ -44,14 +44,6 @@ export class RxjsComponent implements OnInit, OnDestroy {
 
         observer.next(salida);
 
-        // if ( contador === 3 ) {
-        //   clearInterval( intervalo );
-        //   observer.complete();
-        // }
-        // if ( contador === 2 ) {
-        //   // clearInterval( intervalo );
-        //   observer.error('Auxilo!');
-        // }
 
       }, 1000 );
 
